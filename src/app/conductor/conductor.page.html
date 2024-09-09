@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar>
+    <ion-buttons slot="end">
+          <ion-button routerLink="/home">
+            <ion-icon color="primary" slot="icon-only" name="home-outline"></ion-icon>
+          </ion-button>
+          <ion-button routerLink="/perfil">
+            <ion-icon color="primary" slot="icon-only" name="person-circle"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="titulo">
+      Conductor
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <h3 class="subtitulo encabezado">Bienvenido!</h3>
+
+  <ion-button [routerLink]="['/viaje']" expand="full" color="dark" style="margin: 30px" >
+    Crear viaje
+  </ion-button>
+  <br>
+  <ion-button [routerLink]="['/mostrar-viajes']" expand="full" color="dark" style="margin: 30px" >
+    Lista de viajes creados
+  </ion-button>
+  <br>
+  <ion-button [routerLink]="['/solicitudes-viajes']" expand="full" color="dark" style="margin: 30px" >
+    Solicitudes de viajes
+  </ion-button>
+  <br>
+  <ion-button [routerLink]="['/home']" expand="full" color="dark" style="margin: 30px">
+    Cerrar sesión
+  </ion-button> 
+ </ion-content>

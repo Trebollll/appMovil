@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+        <ion-button routerLink="/home">
+          <ion-icon color="primary" slot="icon-only" name="home-outline"></ion-icon>
+        </ion-button>
+        <ion-button >
+          <ion-icon color="primary" slot="icon-only" name="person-circle"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="titulo">
+      Perfil 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  
+ 
+  <br>
+    <ion-card>
+    <ion-card-content>
+      <img class="col-12 m-1" src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="" width="110" height="150
+      30">
+      <ion-card-title class="card-title text-center">
+        <br>Nombre: {{usuario}}
+      </ion-card-title>
+      <br><br>
+      <p class="card-text text-center">Vehiculo: {{vehiculo}} </p>
+      <p class="card-text text-center">Email: {{email}} </p>
+      <p class="card-text text-center">Edad: {{edad}} </p>
+      <br>
+      <div style="text-align: end; margin: 10px;">
+      <ion-button [routerLink]="['/conductor']" class="normal" color="dark"> Atras </ion-button>
+      </div>
+    </ion-card-content>
+    </ion-card>
+
+</ion-content>

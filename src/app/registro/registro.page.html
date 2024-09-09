@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="titulo">
+      Registro
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<h3 class="subtitulo encabezado">Creación de Usuario</h3>
+<ion-item>
+  <ion-label class="normal" position="floating">
+    Email:
+  </ion-label>
+  <ion-input [(ngModel)]="emaill" class="normal" type="text" inputmode="text">
+  </ion-input>
+</ion-item> 
+
+<ion-item>
+  <ion-label class="normal" position="floating">
+    Nombre:
+  </ion-label>
+  <ion-input [(ngModel)]="nombre" class="normal" type="text" inputmode="text">
+  </ion-input>
+</ion-item> 
+
+<ion-item>
+  <ion-label class="normal" position="floating">
+    Apellido:
+  </ion-label>
+  <ion-input [(ngModel)]="apellido" class="normal" type="text" inputmode="text">
+  </ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label class="normal" position="floating">
+    Género:
+  </ion-label>
+  <ion-input [(ngModel)]="sexo" class="normal" type="text" inputmode="text">
+  </ion-input>
+</ion-item> 
+
+<ion-item>
+  <ion-label class="normal" position="floating">
+    Fecha Nacimiento:
+  </ion-label>
+  <ion-input [(ngModel)]="fechaNac" class="normal" type="text" inputmode="text">
+  </ion-input>
+</ion-item> 
+
+<ion-item>
+  <ion-label class="normal" position="floating">
+    N° Celular:
+  </ion-label>
+  <ion-input [(ngModel)]="fono" class="normal" type="text" inputmode="text">
+  </ion-input>
+</ion-item> 
+
+<ion-item>
+  <ion-label class="normal" position="floating">
+    Contraseña:
+  </ion-label>
+  <ion-input [(ngModel)]="password" class="normal" type="text" inputmode="text">
+  </ion-input>
+</ion-item> 
+
+<div style="text-align: end; margin: 10px;">
+  <ion-button (click)="registrarse()" class="normal" color="dark"> Registrarse </ion-button>
+</div>
+<div style="text-align: end; margin: 10px;">
+  <ion-button [routerLink]="['/home']" class="normal" color="dark"> Atrás </ion-button>
+</div>
+  
+</ion-content>

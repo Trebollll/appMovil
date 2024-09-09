@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home">
+        <ion-icon color="primary" slot="icon-only" name="home-outline"></ion-icon>
+      </ion-button>
+      <ion-button >
+        <ion-icon color="primary" slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="titulo">
+      Conductor
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+ <h3 class="subtitulo encabezado">Bienvenido!</h3>
+  <ion-list>
+    <br>
+    <ion-item>
+      <ion-label>
+        Usuario
+      </ion-label>
+      <ion-input [(ngModel)]="usuarioCond" slot="end" type="text" placeholder="Ingresar usuario"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label>
+        Contraseña
+      </ion-label>
+      <ion-input [(ngModel)]="passCond" slot="end" type="password" placeholder="Ingresar contraseña"></ion-input>
+    </ion-item>
+  </ion-list>
+  <br>
+  <ion-button (click)="ingresar()" expand="full" color="dark" style="margin: 30px"  >Ingresar </ion-button>
+  <div style="text-align: end; margin: 10px;">
+    <ion-button class="normal" fill="clear" color="primary"  routerLink="/restablecer">Restablecer contraseña</ion-button>
+  </div>
+
+</ion-content>

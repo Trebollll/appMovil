@@ -1,0 +1,106 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+        <ion-button routerLink="/home">
+          <ion-icon color="primary" slot="icon-only" name="home-outline"></ion-icon>
+        </ion-button>
+        <ion-button routerLink="/perfil">
+          <ion-icon color="primary" slot="icon-only" name="person-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title class="titulo">Nuevo Viaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <h3 class="subtitulo encabezado">Ingrese Viaje</h3>
+
+  <ion-item>
+    <ion-label class="normal" position="floating">
+      Fecha de salida:
+    </ion-label>
+    <ion-input [(ngModel)]="fecha" class="normal">
+    </ion-input>
+  </ion-item>
+  <br>
+  <ion-item>
+    <ion-label class="normal" position="floating">
+      Patente:
+    </ion-label>
+    <ion-input [(ngModel)]="patente" class="normal">
+    </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label class="normal" position="floating">
+      Vehículo:
+    </ion-label>
+    <ion-input [(ngModel)]="vehiculo" class="normal">
+    </ion-input>
+  </ion-item>
+  <br>
+  <ion-item>
+    <ion-label  class="normal" position="floating">
+      Origen:
+    </ion-label>
+    <ion-input [(ngModel)]="origen" class="normal" >
+    </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label class="normal" position="floating">
+      Destino:
+    </ion-label>
+    <ion-input [(ngModel)]="destino" class="normal" >
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="normal" position="floating">
+      Max. Pasajeros:
+    </ion-label>
+    <ion-input [(ngModel)]="pasajeros" class="normal">
+    </ion-input>
+  </ion-item>
+  <br>
+  <ion-item>
+    <ion-select [(ngModel)]="gama" class="normal" type="text" label="Gama Vehiculo">
+      <ion-select-option value="Alta">Alta</ion-select-option>
+      <ion-select-option value="Media">Media</ion-select-option>
+      <ion-select-option value="Baja">Baja</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="normal" position="floating">
+      Precio:
+    </ion-label>
+    <ion-input [(ngModel)]="precio" class="normal" type="text" inputmode="text">
+    </ion-input>
+  </ion-item>
+  <br>
+  <ion-item>
+    <ion-label class="normal">
+      Imagen:
+    </ion-label>
+    <br>
+    <ion-input [(ngModel)]="img"></ion-input>
+    <ion-buttons slot="end" >
+      <ion-button>
+        <ion-icon slot="icon-only" name="camera-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+  <ion-button (click)="crearViaje()" expand="full" color="dark" style="margin: 30px" >Crear Viaje</ion-button>
+
+  
+  <div style="text-align: end; margin: 10px;">
+  <ion-button [routerLink]="['/conductor']" class="normal" color="dark"> Atras </ion-button>
+  </div>
+  
+</ion-content>

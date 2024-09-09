@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+        <ion-button routerLink="/home">
+          <ion-icon color="primary" slot="icon-only" name="home-outline"></ion-icon>
+        </ion-button>
+        <ion-button routerLink="/perfil">
+          <ion-icon color="primary" slot="icon-only" name="person-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title class="titulo">Viajes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  [fullscreen]="true">
+  <h3 class="subtitulo encabezado">Viajes disponibles!</h3>
+
+  <ion-list [inset]="true">
+
+  @for(viaje of viajesSrv.viajes; track $index)
+  {
+    <br>
+    <ion-card>
+    <ion-card-content>
+      <img class="col-12 m-1" [src]="imgViaje(viaje)" alt="" width="110" height="150
+      30">
+      <ion-card-title class="card-title text-center">
+        <br>Fecha: {{viaje.fecha}} <br>Precio: ${{viaje.precio}}
+      </ion-card-title>
+      <p class="card-text text-center"><br>Patente: {{viaje.patente}}</p>
+      <p class="card-text text-center">Vehiculo: {{viaje.vehiculo}}</p>
+      <p class="card-text text-center">Gama Vehiculo: {{viaje.gama}}</p>
+      <p class="card-text text-center">Inicio Viaje: {{viaje.origen}}</p>
+      <p class="card-text text-center">Destino: {{viaje.destino}}</p>
+      <p class="card-text text-center">N° Pasajeros: {{viaje.pasajeros}}</p>
+    </ion-card-content>
+    <ion-button [routerLink]="['/solicitudes-viajes']" expand="full" color="dark" style="margin: 30px">
+      Solicitar viaje
+    </ion-button> 
+    </ion-card>
+  }
+  </ion-list>
+
+  <div style="text-align: end; margin: 10px;">
+    <ion-button [routerLink]="['/pasajero']" class="normal" color="dark"> Atras </ion-button>
+    </div>
+
+</ion-content>
